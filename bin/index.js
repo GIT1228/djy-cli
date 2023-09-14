@@ -10,10 +10,10 @@ const chalk = require('chalk')
 
 
 const projectList = {
-    'vue': 'git@github.com:GIT1228/vue-main.git',
-    'react': 'git@github.com:GIT1228/vue-son.git',
-    'react&ts': 'git@github.com:GIT1228/vue-son.git',
-    'vue&ts': 'git@github.com:GIT1228/vue-main.git',
+    'vue': 'git@github.com:GIT1228/base-vue.git',
+    'react': 'git@github.com:GIT1228/sub-react.git',
+    'react&ts': 'git@github.com:GIT1228/sub-vue3.git',
+    'vue&ts': 'git@github.com:GIT1228/sub-react.git',
 }
 
 // 首行提示
@@ -29,7 +29,7 @@ program
     .description('创建一个新的项目')
     .action(async function (name) {
         // 创建项目的逻辑
-        // 闯将一个名字为name的文件夹，把我们模板项目的代码都放到这个文件夹下面
+        // 将一个名字为name的文件夹，把我们模板项目的代码都放到这个文件夹下面
         // 1. 先判断有没有名字为name的文件夹
         const targetPath = path.join(process.cwd(), name)
         if (fs.existsSync(targetPath)) {
